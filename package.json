@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "@prisma/client": "^4.3.0",
+    "dotenv": "^16.0.2",
     "express": "^4.18.1",
     "nodemon": "^2.0.19",
     "prettier": "^2.7.1",
@@ -7,9 +9,9 @@
   },
   "name": "products",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "nodemon src/server.js"
+    "start": "nodemon src/services/server.js"
   },
   "repository": {
     "type": "git",
@@ -22,12 +24,13 @@
     "url": "https://github.com/EdineyQuintino/Products/issues"
   },
   "homepage": "https://github.com/EdineyQuintino/Products#readme",
-  "description": "",
   "devDependencies": {
     "eslint": "^8.23.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.2.5",
-    "eslint-plugin-promise": "^6.0.1"
-  }
+    "eslint-plugin-promise": "^6.0.1",
+    "prisma": "^4.3.0"
+  },
+  "description": ""
 }
