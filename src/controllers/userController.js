@@ -14,14 +14,14 @@ async index(req,resp) {
 async create(req,resp) {
     try {
         const { name , password} = req.body;
-        const users = await connection.users.create({
+
+        const users = await connection.user.create({
             data: {
                 name,
                 password
             }
-            
         })
-        console.log(users);
+
         return response.status(201).json({ users });
 
     } catch (error) {
