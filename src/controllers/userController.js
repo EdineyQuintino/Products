@@ -3,7 +3,7 @@ const connection = require('../database/prismaClient');
 module.exports = {
 async index(req,resp) {
     try {
-        const users = await connection.users.findMany();
+        const users = await connection.user.findMany();
         
         return resp.status(200).json(users);
     } catch (error) {
