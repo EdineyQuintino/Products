@@ -3,7 +3,7 @@ const connection = require("../database/prismaClient");
 module.exports = {
   async index(req, resp) {
     try {
-      const products = await connection.products.findMany();
+      const categories = await connection.products.findMany();
 
       return resp.status(200).json(products);
     } catch (error) {
