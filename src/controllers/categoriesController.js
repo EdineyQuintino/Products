@@ -12,11 +12,11 @@ module.exports = {
   },
   async create(req, resp) {
     try {
-      const { product_name, productCategory } = req.body;
+      const { id, Category } = req.body;
       const categories = await connection.categories.create({
         data: {
-          product_name,
-          productCategory,
+          id,
+          Category,
         },
       });
       return response.status(201).json({ categories });
